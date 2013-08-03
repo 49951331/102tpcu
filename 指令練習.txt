@@ -1,0 +1,55 @@
+加總:
+SELECT * ,SUM(`count`) AS `總計`
+FROM `license` 
+Where deleted = 1
+
+
+複製：
+Insert into `audit`(sn,class,year,semester,sid,name,domestic_outer,license_name,licensing_units,login_date,level,image_upload,licensing_date,deleted) 
+select sn,class,year,semester,sid,name,domestic_outer,license_name,licensing_units,login_date,level,image_upload,licensing_date,deleted from `add_data`;
+
+
+搜尋
+SELECT * ,SUM(`123`) AS `張數`FROM `data` WHERE license_name ='中華民國技術士 - 電腦軟體應用'
+
+搜尋TQC
+SELECT * ,SUM(`123`) AS `張數`FROM `data` WHERE license_name like '%TQC%' 
+
+select count(license_name) from license where license_name like '%TQC%' 
+
+
+合併
+SELECT suid.user_id,suid.password,suid.class,	data.department,data.sid,data.year
+FROM suid,data
+WHERE 1
+
+
+
+
+add_data:
+sn
+domestic_outer
+license_name
+licensing_units
+login_date
+level
+image upload
+licensing_date
+deleted
+
+
+audit:
+class
+year
+semester
+sid
+name
+license_name
+audit_state
+audit_results
+audit_fail_reason
+deleted
+
+
+
+

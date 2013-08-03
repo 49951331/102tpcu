@@ -1,0 +1,73 @@
+`add_data`證照新增
+
+  `sn` int(20)			(流水號)
+  `class` varchar(20)		(學制)
+  `year` varchar(20)		(學年)
+  `semester` varchar(20)	(學期)
+  `sid` varchar(20)		(學號)
+  `name` varchar(20)		(中文姓名)
+  `ename` varchar(20)		(英文姓名)
+  `domestic_outer` varchar(20)	(國內外)
+  `license_name` varchar(100)	(證照名稱)
+  `licensing_units` varchar(100)(發照單位)
+  `login_date` date		(登錄日期)
+  `level` varchar(20)		(級別)
+  `image upload` blob 		(證照影像檔)
+  `licensing_date` date 	(發照日)
+  `deleted` int(20)		(判斷)
+
+`audit`證照審核
+
+  `sn` int(20)			 (流水號)
+  `class` varchar(20)		 (學制)
+  `year` varchar(20)		 (學年)
+  `semester` varchar(20)	 (學期)
+  `sid` varchar(20)		 (學號)
+  `name` varchar(20)		 (中文姓名)
+  `ename` varchar(20)		 (英文姓名)
+  `domestic_outer` varchar(20)	 (國內外)
+  `license_name` varchar(100)	 (證照名稱)
+  `licensing_units` varchar(100) (發照單位)
+  `login_date` date		 (登錄日期)
+  `level` varchar(20)		 (級別)
+  `image upload` blob 		 (證照影像檔)
+  `licensing_date` date 	 (發照日)
+  `audit_state` varchar(20)	 (審核狀態)
+  `audit_results` varchar(20)	 (審核結果)
+  `audit_fail_reason` varchar(20)(審核未通過原因)
+  `deleted` int(20)		 (判斷)
+
+`data`證照資料
+
+  `class` varchar(6)		(學制)
+  `department` varchar(5)	(科系)
+  `sid` varchar(20)		(學號)
+  `year` varchar(5)		(學年)
+  `semester` varchar(5)		(學期)
+  `licensing_date` date		(發照日)
+  `domestic_outer` varchar(5)	(國內外)
+  `licensing_units` varchar(20)	(發照單位)
+  `license_name` varchar(20)	(證照名稱)
+  `level` varchar(20)		(級別)
+  `deleted` int(20)		(判斷)
+  `deleted1` int(20)		(判斷)
+
+`license`證照資訊
+
+  `lid` varchar(20)		 (證照代號)
+  `license_category` varchar(100)(證照類別)
+  `licensing_units` varchar(100) (發照單位)
+  `license_name` varchar(100)	 (證照名稱)
+  `level` varchar(100)		 (級別)
+  `count` int(20)		 (點數)
+  `deleted` int(20)		 (判斷)
+
+`suid`學生帳戶
+
+  `user_id` varchar(20)		(帳號)
+  `password` varchar(20)	(密碼)
+  `class` varchar(20)		(學制)
+  `sid` varchar(20)		(學號)
+  `name` varchar(20)		(中文姓名)
+  `ename` varchar(20)		(英文姓名)
+  `deleted` int(20)		(判斷)
